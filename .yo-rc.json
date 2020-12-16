@@ -1,0 +1,43 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.esteme",
+      "nativeLanguage": "de"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "esteme",
+    "packageName": "com.esteme",
+    "packageFolder": "com/esteme",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "OWQxMDQ3NWE5ODE5Yzg5MmZmYzczNWU2ZDgyNWUyMGI3Y2U0OWFjMTRhOTNhODU2ZGRjMmVkN2E0N2E5YTBkYzJjNGEwODYwZjUwNWE3ZDJmMGFlNzgyYThmZDQxNGViM2ZiODA5MWNmY2Y3MjE5MmI4M2FkNjQxMmNhYzMzOGE=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "darkly",
+    "clientThemeVariant": "dark",
+    "creationTimestamp": 1608136076774,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": true,
+    "nativeLanguage": "de",
+    "languages": ["de"],
+    "blueprints": []
+  }
+}
