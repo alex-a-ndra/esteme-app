@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Benefit.
+    -->
+    <changeSet id="20201220161231-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="benefit_id"
+                                 baseTableName="benefit_is_used_by"
+                                 constraintName="fk_benefit_is_used_by_benefit_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="benefit"/>
+
+        <addForeignKeyConstraint baseColumnNames="is_used_by_id"
+                                 baseTableName="benefit_is_used_by"
+                                 constraintName="fk_benefit_is_used_by_is_used_by_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="jhi_user"/>
+        
+    </changeSet>
+</databaseChangeLog>

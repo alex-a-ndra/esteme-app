@@ -51,6 +51,8 @@ public class CacheConfiguration {
             createCache(cm, com.esteme.domain.User.class.getName());
             createCache(cm, com.esteme.domain.Authority.class.getName());
             createCache(cm, com.esteme.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.esteme.domain.Benefit.class.getName());
+            createCache(cm, com.esteme.domain.Benefit.class.getName() + ".isUsedBies");
             // jhipster-needle-ehcache-add-entry
         };
     }
