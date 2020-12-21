@@ -1,0 +1,12 @@
+
+
+
+
+
+entity Benefit {
+	name String
+}
+
+relationship ManyToMany {
+	Benefit{isUsedBy} to User{uses}
+}

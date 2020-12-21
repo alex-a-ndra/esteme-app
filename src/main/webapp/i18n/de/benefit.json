@@ -1,0 +1,23 @@
+{
+  "estemeApp": {
+    "benefit": {
+      "home": {
+        "title": "Benefits",
+        "createLabel": "Benefit erstellen",
+        "createOrEditLabel": "Benefit erstellen oder bearbeiten",
+        "notFound": "No Benefits found"
+      },
+      "created": "Benefit erstellt mit ID {{ param }}",
+      "updated": "Benefit aktualisiert mit ID {{ param }}",
+      "deleted": "Benefit gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Benefit {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Benefit"
+      },
+      "name": "Name",
+      "isUsedBy": "Is Used By"
+    }
+  }
+}
