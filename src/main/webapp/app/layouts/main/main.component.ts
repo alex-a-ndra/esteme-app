@@ -11,6 +11,7 @@ import { AccountService } from 'app/core/auth/account.service';
 })
 export class MainComponent implements OnInit {
   private renderer: Renderer2;
+  showNavbar: boolean;
 
   constructor(
     private accountService: AccountService,
@@ -20,11 +21,13 @@ export class MainComponent implements OnInit {
     rootRenderer: RendererFactory2
   ) {
     this.renderer = rootRenderer.createRenderer(document.querySelector('html'), null);
+    this.showNavbar = true;
   }
 
   ngOnInit(): void {
     // try to log in automatically
     this.accountService.identity().subscribe();
+    this.showNavbar = this.isAuthenticated();
 
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -40,6 +43,10 @@ export class MainComponent implements OnInit {
 
       this.renderer.setAttribute(document.querySelector('html'), 'lang', langChangeEvent.lang);
     });
+  }
+
+  isAuthenticated(): boolean {
+    return this.accountService.isAuthenticated();
   }
 
   private getPageTitle(routeSnapshot: ActivatedRouteSnapshot): string {
