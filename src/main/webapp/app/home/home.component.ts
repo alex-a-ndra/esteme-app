@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 import { LoginModalService } from 'app/core/login/login-modal.service';
@@ -14,12 +14,13 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['home.scss'],
 })
 export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('email', { static: false })
   account: Account | null = null;
   authSubscription?: Subscription;
-  username?: ElementRef;
+  email?: ElementRef;
 
   loginForm = this.fb.group({
-    username: [''],
+    email: [''],
     password: [''],
     rememberMe: [false],
   });
@@ -38,8 +39,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    if (this.username) {
-      this.username.nativeElement.focus();
+    if (this.email) {
+      this.email.nativeElement.focus();
     }
   }
 
@@ -50,7 +51,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   login(): void {
     this.loginService
       .login({
-        username: this.loginForm.get('username')!.value,
+        email: this.loginForm.get('email')!.value,
         password: this.loginForm.get('password')!.value,
         rememberMe: this.loginForm.get('rememberMe')!.value,
       })

@@ -24,9 +24,9 @@
                             <div>
                                 <form class="form" role="form" (ngSubmit)="login()" [formGroup]="loginForm">
                                     <div class="form-group">
-                                        <label class="username-label" for="username" jhiTranslate="global.form.username.label">E-Mail (Pflicht)</label>
-                                        <input type="text" class="form-control esteme-form-text" autocomplete="email" name="username" id="username" placeholder="{{ 'global.form.username.placeholder' | translate }}"
-                                               formControlName="username" #username>
+                                        <label for="email" jhiTranslate="global.form.email.label">E-Mail (Pflicht)</label>
+                                        <input type="text" class="form-control esteme-form-text" autocomplete="email" name="email" id="email" placeholder="{{ 'global.form.email.placeholder' | translate }}"
+                                               formControlName="email" #email>
                                     </div>
                                     <div class="form-group">
                                         <label for="password" jhiTranslate="login.form.password">Password</label>
@@ -51,7 +51,7 @@
                     <span>
                         <div class="footer-text">
                             <span>Kein Account?</span>
-                            <a class="login-link" (click)="reigster()">Dann hol dir einen!</a>
+                            <a class="login-link" (click)="register()">Dann hol dir einen!</a>
                         </div>
                     </span>
                 </div>
