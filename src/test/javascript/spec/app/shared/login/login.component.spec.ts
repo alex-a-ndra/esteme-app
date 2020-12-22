@@ -47,13 +47,13 @@ describe('Component Tests', () => {
       fakeAsync(() => {
         // GIVEN
         const credentials = {
-          username: 'admin',
+          email: 'admin',
           password: 'admin',
           rememberMe: true,
         };
 
         comp.loginForm.patchValue({
-          username: 'admin',
+          email: 'admin',
           password: 'admin',
           rememberMe: true,
         });
@@ -79,7 +79,7 @@ describe('Component Tests', () => {
       });
 
       const expected = {
-        username: '',
+        email: '',
         password: '',
         rememberMe: false,
       };
@@ -89,28 +89,10 @@ describe('Component Tests', () => {
 
       // THEN
       expect(comp.authenticationError).toEqual(false);
-      expect(comp.loginForm.get('username')!.value).toEqual(expected.username);
+      expect(comp.loginForm.get('email')!.value).toEqual(expected.email);
       expect(comp.loginForm.get('password')!.value).toEqual(expected.password);
       expect(comp.loginForm.get('rememberMe')!.value).toEqual(expected.rememberMe);
       expect(mockActiveModal.dismissSpy).toHaveBeenCalledWith('cancel');
-    });
-
-    it('should redirect user when register', () => {
-      // WHEN
-      comp.register();
-
-      // THEN
-      expect(mockActiveModal.dismissSpy).toHaveBeenCalledWith('to state register');
-      expect(mockRouter.navigateSpy).toHaveBeenCalledWith(['/account/register']);
-    });
-
-    it('should redirect user when request password', () => {
-      // WHEN
-      comp.requestResetPassword();
-
-      // THEN
-      expect(mockActiveModal.dismissSpy).toHaveBeenCalledWith('to state requestReset');
-      expect(mockRouter.navigateSpy).toHaveBeenCalledWith(['/account/reset', 'request']);
     });
   });
 });

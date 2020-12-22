@@ -10,13 +10,13 @@ import { LoginService } from 'app/core/login/login.service';
   templateUrl: './login.component.html',
 })
 export class LoginModalComponent implements AfterViewInit {
-  @ViewChild('username', { static: false })
-  username?: ElementRef;
+  @ViewChild('email', { static: false })
+  email?: ElementRef;
 
   authenticationError = false;
 
   loginForm = this.fb.group({
-    username: [''],
+    email: [''],
     password: [''],
     rememberMe: [false],
   });
@@ -24,8 +24,8 @@ export class LoginModalComponent implements AfterViewInit {
   constructor(private loginService: LoginService, private router: Router, public activeModal: NgbActiveModal, private fb: FormBuilder) {}
 
   ngAfterViewInit(): void {
-    if (this.username) {
-      this.username.nativeElement.focus();
+    if (this.email) {
+      this.email.nativeElement.focus();
     }
   }
 
@@ -41,7 +41,7 @@ export class LoginModalComponent implements AfterViewInit {
   login(): void {
     this.loginService
       .login({
-        username: this.loginForm.get('username')!.value,
+        email: this.loginForm.get('email')!.value,
         password: this.loginForm.get('password')!.value,
         rememberMe: this.loginForm.get('rememberMe')!.value,
       })
