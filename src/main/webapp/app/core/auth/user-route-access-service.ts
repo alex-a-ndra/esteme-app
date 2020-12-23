@@ -28,7 +28,7 @@ export class UserRouteAccessService implements CanActivate {
     return this.accountService.identity().pipe(
       map(account => {
         if (!authorities || authorities.length === 0) {
-          return true;
+          return false;
         }
 
         if (account) {
@@ -45,7 +45,6 @@ export class UserRouteAccessService implements CanActivate {
 
         this.stateStorageService.storeUrl(url);
         this.router.navigate(['']);
-        this.loginModalService.open();
         return false;
       })
     );

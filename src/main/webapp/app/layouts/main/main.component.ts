@@ -32,6 +32,7 @@ export class MainComponent implements OnInit {
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
         this.updateTitle();
+        this.showNavbar = this.isAuthenticated();
       }
       if (event instanceof NavigationError && event.error.status === 404) {
         this.router.navigate(['/404']);
@@ -40,7 +41,6 @@ export class MainComponent implements OnInit {
 
     this.translateService.onLangChange.subscribe((langChangeEvent: LangChangeEvent) => {
       this.updateTitle();
-
       this.renderer.setAttribute(document.querySelector('html'), 'lang', langChangeEvent.lang);
     });
   }

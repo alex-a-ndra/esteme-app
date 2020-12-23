@@ -31,6 +31,7 @@
   },
   "defaultProject": "esteme",
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "04894ac6-c3c1-4e7e-a256-4eb7d45ad72c"
   }
 }

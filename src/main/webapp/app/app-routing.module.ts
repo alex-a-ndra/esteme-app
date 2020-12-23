@@ -23,7 +23,18 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
         },
         {
           path: 'account',
+          data: {
+            authorities: [Authority.ADMIN, Authority.USER],
+          },
           loadChildren: () => import('./account/account.module').then(m => m.AccountModule),
+        },
+        {
+          path: 'dashboard',
+          data: {
+            authorities: [Authority.ADMIN, Authority.USER],
+          },
+          canActivate: [UserRouteAccessService],
+          loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
         },
         ...LAYOUT_ROUTES,
       ],

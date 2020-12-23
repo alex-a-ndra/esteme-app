@@ -34,6 +34,14 @@ Main page styles
   background-size: 100px 82px;
 }
 
+.wert {
+  display: block;
+  background: url(../../content/images/Wert.png);
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+
 .error-message-container {
   width: 370px;
 }
@@ -78,6 +86,7 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     width: 100%;
     overflow-y: auto;

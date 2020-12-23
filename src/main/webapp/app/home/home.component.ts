@@ -1,7 +1,6 @@
 import { Component, OnInit, OnDestroy, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { Subscription } from 'rxjs';
 
-import { LoginModalService } from 'app/core/login/login-modal.service';
 import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/user/account.model';
 import { Router } from '@angular/router';
@@ -64,6 +63,8 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
             this.router.url.startsWith('/account/reset/')
           ) {
             this.router.navigate(['']);
+          } else {
+            this.router.navigate(['/dashboard']);
           }
         },
         () => (this.authenticationError = true)
