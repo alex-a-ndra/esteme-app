@@ -1,6 +1,5 @@
 @import 'bootstrap-variables';
 @import '~bootstrap/scss/functions';
-@import '~bootswatch/dist/darkly/variables';
 @import '~bootstrap/scss/variables';
 
 /* ==============================================================
@@ -13,6 +12,7 @@ h2,
 h3,
 h4 {
   font-weight: 300;
+  background-color: #ffffff;
 }
 
 a:hover {
@@ -44,6 +44,7 @@ Generic styles
   padding: 1.5%;
   margin-top: 20px;
   border: none;
+  background-color: #ffffff;
 }
 
 .error {
@@ -88,6 +89,7 @@ Custom alerts for notification
 .alerts {
   .alert {
     text-overflow: ellipsis;
+
     pre {
       background: none;
       border: none;
@@ -96,22 +98,28 @@ Custom alerts for notification
       padding: 0;
       margin: 0;
     }
+
     .popover pre {
       font-size: 10px;
     }
   }
+
   .jhi-toast {
     position: fixed;
     width: 100%;
+
     &.left {
       left: 5px;
     }
+
     &.right {
       right: 5px;
     }
+
     &.top {
       top: 55px;
     }
+
     &.bottom {
       bottom: 55px;
     }
@@ -138,6 +146,7 @@ entity detail page css
     dt {
       margin-bottom: 15px;
     }
+
     dd {
       border-bottom: 1px solid #eee;
       padding-left: 180px;
@@ -163,4 +172,56 @@ ui bootstrap tweaks
   white-space: nowrap;
 }
 
+.no-padding-right {
+  padding-right: 0;
+}
 /* jhipster-needle-scss-add-main JHipster will add new css style */
+
+.esteme-form-text {
+  position: relative;
+  background-color: #fff;
+  background-image: none;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  box-sizing: border-box;
+  color: #000;
+  display: block;
+  font-family: DMSans, Helvetica, Arial, sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.38;
+  margin: 0;
+  min-height: 2.625rem;
+  padding: 0.625rem;
+  width: 100%;
+  outline: 0;
+}
+
+.esteme-btn {
+  position: relative;
+  color: #ffffff;
+  width: 100%;
+  background-color: #9e8148;
+  border: 1px solid #9e8148;
+  border-radius: 0.25rem;
+  box-shadow: none;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  -webkit-font-smoothing: subpixel-antialiased;
+  margin: 0;
+  min-width: 120px;
+  overflow: visible;
+  padding: 0 2.25em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 2.75;
+}
