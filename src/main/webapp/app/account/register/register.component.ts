@@ -47,7 +47,7 @@ export class RegisterComponent implements AfterViewInit {
 
     const password = this.registerForm.get(['password'])!.value;
     const firstName = this.registerForm.get(['firstName'])!.value;
-    const lastName = this.registerForm.get(['firstName'])!.value;
+    const lastName = this.registerForm.get(['lastName'])!.value;
     if (password !== this.registerForm.get(['confirmPassword'])!.value) {
       this.doNotMatch = true;
     } else {
