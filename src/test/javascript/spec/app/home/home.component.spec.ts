@@ -4,7 +4,6 @@ import { EstemeTestModule } from '../../test.module';
 import { HomeComponent } from 'app/home/home.component';
 import { AccountService } from 'app/core/auth/account.service';
 import { LoginService } from 'app/core/login/login.service';
-import { LoginModalService } from 'app/core/login/login-modal.service';
 import { MockLoginService } from '../../helpers/mock-login.service';
 import { FormBuilder } from '@angular/forms';
 import { MockRouter } from '../../helpers/mock-route.service';

@@ -13,6 +13,11 @@ h3,
 h4 {
   font-weight: 300;
   background-color: #ffffff;
+  color: #000000;
+}
+
+small {
+  color: #000000;
 }
 
 a:hover {
@@ -74,13 +79,25 @@ Generic styles
   opacity: 1;
 }
 
-.footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.125);
-}
-
 .hand,
 [jhisortby] {
   cursor: pointer;
+}
+
+label {
+  color: #404040;
+  display: inline-block;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.heading {
+  font-size: 1.75rem;
+  color: #404040;
+  font-weight: bolder;
 }
 
 /* ==========================================================================
@@ -224,4 +241,11 @@ ui bootstrap tweaks
   vertical-align: middle;
   white-space: nowrap;
   line-height: 2.75;
+  &:hover {
+    color: #000000;
+    background-color: #9e8148;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
 }

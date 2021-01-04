@@ -4,16 +4,17 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { JhiLanguageService } from 'ng-jhipster';
 
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared/constants/error.constants';
-import { LoginModalService } from 'app/core/login/login-modal.service';
 import { RegisterService } from './register.service';
+import { Authority } from 'app/shared/constants/authority.constants';
 
 @Component({
   selector: 'jhi-register',
   templateUrl: './register.component.html',
+  styleUrls: ['register.scss'],
 })
 export class RegisterComponent implements AfterViewInit {
-  @ViewChild('login', { static: false })
-  login?: ElementRef;
+  @ViewChild('email', { static: false })
+  email?: ElementRef;
 
   doNotMatch = false;
   error = false;
@@ -21,31 +22,20 @@ export class RegisterComponent implements AfterViewInit {
   errorUserExists = false;
   success = false;
 
+  // Validators.pattern('^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[*.!@$%^&(){}[]:;<>,.?/~_+-=|]).{8,32}$')
   registerForm = this.fb.group({
-    login: [
-      '',
-      [
-        Validators.required,
-        Validators.minLength(1),
-        Validators.maxLength(50),
-        Validators.pattern('^[a-zA-Z0-9!$&*+=?^_`{|}~.-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$|^[_.@A-Za-z0-9-]+$'),
-      ],
-    ],
-    email: ['', [Validators.required, Validators.minLength(5), Validators.maxLength(254), Validators.email]],
-    password: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
-    confirmPassword: ['', [Validators.required, Validators.minLength(4), Validators.maxLength(50)]],
+    email: ['', [Validators.required, Validators.maxLength(254), Validators.email]],
+    password: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(32)]],
+    confirmPassword: ['', [Validators.required, Validators.minLength(8), Validators.maxLength(32)]],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
   });
 
-  constructor(
-    private languageService: JhiLanguageService,
-    private loginModalService: LoginModalService,
-    private registerService: RegisterService,
-    private fb: FormBuilder
-  ) {}
+  constructor(private languageService: JhiLanguageService, private registerService: RegisterService, private fb: FormBuilder) {}
 
   ngAfterViewInit(): void {
-    if (this.login) {
-      this.login.nativeElement.focus();
+    if (this.email) {
+      this.email.nativeElement.focus();
     }
   }
 
@@ -56,20 +46,27 @@ export class RegisterComponent implements AfterViewInit {
     this.errorUserExists = false;
 
     const password = this.registerForm.get(['password'])!.value;
+    const firstName = this.registerForm.get(['firstName'])!.value;
+    const lastName = this.registerForm.get(['firstName'])!.value;
     if (password !== this.registerForm.get(['confirmPassword'])!.value) {
       this.doNotMatch = true;
     } else {
-      const login = this.registerForm.get(['login'])!.value;
       const email = this.registerForm.get(['email'])!.value;
-      this.registerService.save({ login, email, password, langKey: this.languageService.getCurrentLanguage() }).subscribe(
-        () => (this.success = true),
-        response => this.processError(response)
-      );
+      this.registerService
+        .save({
+          email,
+          password,
+          firstName,
+          lastName,
+          langKey: this.languageService.getCurrentLanguage(),
+          authorities: [Authority.USER],
+          activated: true,
+        })
+        .subscribe(
+          () => (this.success = true),
+          response => this.processError(response)
+        );
     }
-  }
-
-  openLogin(): void {
-    this.loginModalService.open();
   }
 
   private processError(response: HttpErrorResponse): void {
