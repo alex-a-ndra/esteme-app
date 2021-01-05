@@ -1,23 +1,35 @@
 @import 'bootstrap-variables';
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
+@import '_fonts.scss';
 
 /* ==============================================================
 Bootstrap tweaks
 ===============================================================*/
 
-body,
+body {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  font-style: normal;
+  background-color: #ffffff;
+  color: #404040;
+}
+
 h1,
 h2,
 h3,
 h4 {
-  font-weight: 300;
-  background-color: #ffffff;
   color: #000000;
+  font-family: 'Bebas Neue';
+  font-weight: normal;
+  font-style: normal;
 }
 
 small {
   color: #000000;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-style: normal;
 }
 
 a:hover {
@@ -37,6 +49,16 @@ Browser Upgrade Prompt
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+/* ==========================================================================
+Main Page
+========================================================================== */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
 }
 
 /* ==========================================================================
@@ -196,11 +218,19 @@ ui bootstrap tweaks
 .no-padding-left {
   padding-left: 0;
 }
+
+.margin-t-20 {
+  margin-top: 20px;
+}
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 
 .header {
   flex-shrink: 0;
   display: flex;
+}
+
+.page-container {
+  margin: 60px 0 60px 0;
 }
 
 /* ==========================================================================
