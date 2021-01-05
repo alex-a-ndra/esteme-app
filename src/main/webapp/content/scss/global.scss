@@ -198,11 +198,9 @@ ui bootstrap tweaks
 }
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 
-.header,
-.footer {
+.header {
   flex-shrink: 0;
   display: flex;
-  margin-top: auto;
 }
 
 /* ==========================================================================
