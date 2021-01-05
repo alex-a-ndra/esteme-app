@@ -3,16 +3,16 @@
         <div class="loginContainer">
             <div class="login">
                 <div class="header">
-                    <a href="/" class="logo"></a>
+                    <a class="logo-img"></a>
                 </div>
-                <div class="formContainer">
-                    <div class="header">
-                        <h1 class="heading">
-                            Melde dich in deinem Konto an
-                        </h1>
-                        <span class="subHeading">
-                            Verwende deine geschäftliche E-Mail-Adresse
-                        </span>
+                <div class="formContainer">‚
+                    <div class="header" fxLayout="column" fxLayoutAlign="start start">
+                            <h1 class="heading">
+                                Melde dich in deinem Konto an
+                            </h1>
+                            <span class="subHeading">
+                                Verwende deine geschäftliche E-Mail-Adresse
+                            </span>
                     </div>
                     <div class="form-div">
                        <div class="error-message-container" *ngIf="authenticationError">
@@ -47,20 +47,18 @@
                             </div>
                     </div>
                 </div>
-                <div class="footer">
-                    <span>
+                <div class="footer" fxLayout="column" fxLayoutAlign="start center" >
                         <div class="footer-text">
                             <span>Kein Account?</span>
                             <a class="login-link" (click)="register()">Dann hol dir einen!</a>
                         </div>
-                    </span>
                 </div>
             </div>
 
         </div>
     </div>
 
-    <div class="col-md-6 no-padding-right">
+    <div class="col-md-6 no-padding-right no-padding-left">
         <div class="contentContainer">
             <div class="content">
                 <a class="wert"></a>

@@ -192,8 +192,34 @@ ui bootstrap tweaks
 .no-padding-right {
   padding-right: 0;
 }
+
+.no-padding-left {
+  padding-left: 0;
+}
 /* jhipster-needle-scss-add-main JHipster will add new css style */
 
+.header,
+.footer {
+  flex-shrink: 0;
+  display: flex;
+  margin-top: auto;
+}
+
+/* ==========================================================================
+Logo styles
+========================================================================== */
+.logo-img {
+  height: 124px;
+  width: 124px;
+  vertical-align: middle;
+  background: url('../images/logo_esteme.svg') no-repeat center center;
+  background-size: contain;
+  margin: auto;
+}
+
+/* ==========================================================================
+Form styles
+========================================================================== */
 .esteme-form-text {
   position: relative;
   background-color: #fff;
@@ -214,6 +240,9 @@ ui bootstrap tweaks
   outline: 0;
 }
 
+/* ==========================================================================
+Button styles
+========================================================================== */
 .esteme-btn {
   position: relative;
   color: #ffffff;
