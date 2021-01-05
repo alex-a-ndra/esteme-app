@@ -56,28 +56,28 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="form-control-label" for="firstName" jhiTransalte="global.form.firstName.label">First Name</label>
-                        <input type="text" class="form-control esteme-form-text" id="firstName" name="firstName" placeholder="{{ 'global.form.firstName.placeholder' | translate }}"
+                        <label class="form-control-label" for="firstName" jhiTransalte="global.form.firstname.label">First Name</label>
+                        <input type="text" class="form-control esteme-form-text" id="firstName" name="firstName" placeholder="{{ 'global.form.firstname.placeholder' | translate }}"
                         formControlName="firstName">
 
                         <div *ngIf="registerForm.get('firstName')!.invalid && (registerForm.get('firstName')!.dirty || registerForm.get('firstName')!.touched)">
                             <small class="form-text text-danger"
                                    *ngIf="registerForm.get('firstName')?.errors?.required"
-                                   jhiTranslate="global.messages.validate.firstName.required">
+                                   jhiTranslate="global.messages.validate.firstname.required">
                                 Your first name is required.
                             </small>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="form-control-label" for="lastName" jhiTransalte="global.form.lastName.label">Last Name</label>
-                        <input type="text" class="form-control esteme-form-text" id="lastName" name="lastName" placeholder="{{ 'global.form.lastName.placeholder' | translate }}"
+                        <label class="form-control-label" for="lastName" jhiTransalte="global.form.lastname.label">Last Name</label>
+                        <input type="text" class="form-control esteme-form-text" id="lastName" name="lastName" placeholder="{{ 'global.form.lastname.placeholder' | translate }}"
                         formControlName="lastName">
 
                         <div *ngIf="registerForm.get('lastName')!.invalid && (registerForm.get('lastName')!.dirty || registerForm.get('lastName')!.touched)">
                             <small class="form-text text-danger"
                                    *ngIf="registerForm.get('lastName')?.errors?.required"
-                                   jhiTranslate="global.messages.validate.lastName.required">
+                                   jhiTranslate="global.messages.validate.lastname.required">
                                 Your last name is required.
                             </small>
                         </div>

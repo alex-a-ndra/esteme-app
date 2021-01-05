@@ -45,10 +45,10 @@
       "confirmpassword.placeholder": "Bestätigen Sie Ihr neues Passwort",
       "email.label": "Email Adresse",
       "email.placeholder": "Ihre Email Adresse",
-      "firstName.label": "Vorname",
-      "firstName.placeholder": "Ihr Vorname",
-      "lastName.label": "Nachname",
-      "lastName.placeholder": "Ihr Nachname"
+      "firstname.label": "Vorname",
+      "firstname.placeholder": "Ihr Vorname",
+      "lastname.label": "Nachname",
+      "lastname.placeholder": "Ihr Nachname"
     },
     "messages": {
       "info": {
@@ -84,10 +84,10 @@
           "minlength": "Ihre Email Adresse muss mindestens 5 Zeichen lang sein",
           "maxlength": "Ihre Email Adresse darf nicht länger als 50 Zeichen sein"
         },
-        "lastName": {
+        "lastname": {
           "required": "Ihre Nachname wird benötigt."
         },
-        "firstName": {
+        "firstname": {
           "required": "Ihre Vorname wird benötigt."
         }
       }

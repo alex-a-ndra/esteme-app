@@ -9,6 +9,7 @@ import { LANGUAGES } from 'app/core/language/language.constants';
 @Component({
   selector: 'jhi-settings',
   templateUrl: './settings.component.html',
+  styleUrls: ['settings.scss'],
 })
 export class SettingsComponent implements OnInit {
   account!: Account;
