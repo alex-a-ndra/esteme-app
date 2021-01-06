@@ -35,6 +35,9 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
 
   ngOnInit(): void {
     this.authSubscription = this.accountService.getAuthenticationState().subscribe(account => (this.account = account));
+    if (this.account) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   ngAfterViewInit(): void {

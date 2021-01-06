@@ -44,7 +44,11 @@
       "confirmpassword.label": "Neues Passwort bestätigen",
       "confirmpassword.placeholder": "Bestätigen Sie Ihr neues Passwort",
       "email.label": "Email Adresse",
-      "email.placeholder": "Ihre Email Adresse"
+      "email.placeholder": "Ihre Email Adresse",
+      "firstname.label": "Vorname",
+      "firstname.placeholder": "Ihr Vorname",
+      "lastname.label": "Nachname",
+      "lastname.placeholder": "Ihr Nachname"
     },
     "messages": {
       "info": {
@@ -64,13 +68,14 @@
       "validate": {
         "newpassword": {
           "required": "Ein neues Passwort wird benötigt.",
-          "minlength": "Das neue Passwort muss mindestens 4 Zeichen lang sein",
+          "minlength": "Das neue Passwort muss mindestens 8 Zeichen lang sein",
           "maxlength": "Das neue Passwort darf nicht länger als 50 Zeichen sein",
-          "strength": "Passwortstärke:"
+          "strength": "Passwortstärke:",
+          "pattern": "Dieses Feld muss das Muster erfüllen. Maximal 32 Zeichen. Mindestens ein Großbuchstabe und ein Kleinbuschstabe. Mindestens ein Sonderzeichen und mindestens eine Zahl von 0-9"
         },
         "confirmpassword": {
           "required": "Sie müssen das Passwort bestätigen.",
-          "minlength": "Das bestätigte Passwort muss mindestens 4 Zeichen lang sein",
+          "minlength": "Das bestätigte Passwort muss mindestens 8 Zeichen lang sein",
           "maxlength": "Das bestätigte Passwort darf nicht länger als 50 Zeichen sein"
         },
         "email": {
@@ -78,6 +83,12 @@
           "invalid": "Ihre Email Adresse ist ungültig.",
           "minlength": "Ihre Email Adresse muss mindestens 5 Zeichen lang sein",
           "maxlength": "Ihre Email Adresse darf nicht länger als 50 Zeichen sein"
+        },
+        "lastname": {
+          "required": "Ihre Nachname wird benötigt."
+        },
+        "firstname": {
+          "required": "Ihre Vorname wird benötigt."
         }
       }
     },

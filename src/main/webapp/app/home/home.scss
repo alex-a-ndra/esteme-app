@@ -15,25 +15,6 @@ Main page styles
   font-weight: lighter;
 }
 
-.header,
-.footer {
-  flex-shrink: 0;
-  margin-top: auto;
-  height: 100px;
-}
-.footer {
-  border-top: 0;
-}
-
-.logo {
-  display: block;
-  text-indent: -9999px;
-  width: 100px;
-  height: 82px;
-  background: url(../../content/images/logo_esteme.svg);
-  background-size: 100px 82px;
-}
-
 .wert {
   display: block;
   background: url(../../content/images/Wert.png);
@@ -65,18 +46,14 @@ Main page styles
   color: #9e8148;
 }
 
+.login-button {
+  margin-top: 20px;
+}
+
 .footer-text {
   align-self: flex-start;
   color: #404040;
-}
-label {
-  color: #404040;
-  display: inline-block;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  margin-bottom: 8px;
-  max-width: 100%;
-  text-align: left;
+  margin-top: 20px;
 }
 
 .contentContainer {

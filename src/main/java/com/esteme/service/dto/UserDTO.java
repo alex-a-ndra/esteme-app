@@ -17,7 +17,6 @@ public class UserDTO {
 
     private Long id;
 
-    @NotBlank
     @Pattern(regexp = Constants.LOGIN_REGEX)
     @Size(min = 1, max = 50)
     private String login;
@@ -28,6 +27,7 @@ public class UserDTO {
     @Size(max = 50)
     private String lastName;
 
+    @NotBlank
     @Email
     @Size(min = 5, max = 254)
     private String email;
@@ -56,7 +56,7 @@ public class UserDTO {
 
     public UserDTO(User user) {
         this.id = user.getId();
-        this.login = user.getLogin();
+        this.login = user.getEmail();
         this.firstName = user.getFirstName();
         this.lastName = user.getLastName();
         this.email = user.getEmail();
