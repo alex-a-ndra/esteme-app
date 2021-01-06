@@ -19,7 +19,7 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
             authorities: [Authority.ADMIN, Authority.USER],
           },
           canActivate: [UserRouteAccessService],
-          loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+          loadChildren: () => import('./dashboard/dashboard.module').then(m => m.EstemeDashboardModule),
         },
         {
           path: 'admin',
@@ -42,7 +42,7 @@ const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
             authorities: [Authority.ADMIN, Authority.USER],
           },
           canActivate: [UserRouteAccessService],
-          loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+          loadChildren: () => import('./dashboard/dashboard.module').then(m => m.EstemeDashboardModule),
         },
         ...LAYOUT_ROUTES,
       ],

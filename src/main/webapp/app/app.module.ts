@@ -15,6 +15,7 @@ import { PageRibbonComponent } from './layouts/profiles/page-ribbon.component';
 import { ActiveMenuDirective } from './layouts/navbar/active-menu.directive';
 import { ErrorComponent } from './layouts/error/error.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { EstemeDashboardModule } from './dashboard/dashboard.module';
 
 @NgModule({
   imports: [
@@ -24,6 +25,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     EstemeHomeModule,
     // jhipster-needle-angular-add-module JHipster will add new module here
     EstemeEntityModule,
+    EstemeDashboardModule,
     EstemeAppRoutingModule,
   ],
   declarations: [

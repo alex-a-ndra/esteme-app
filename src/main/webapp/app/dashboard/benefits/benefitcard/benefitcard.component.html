@@ -1,0 +1,7 @@
+<div class="card">
+    <img class="card-img-top" [class.not-afforable]="affordable" src="{{imageSource}}" alt="Card image cap">
+  <div class="card-body" [class.not-afforable]="!affordable" >
+    <h5 class="card-title">{{title}}</h5>
+    <p class="card-text">{{description}}</p>
+  </div>
+</div>
