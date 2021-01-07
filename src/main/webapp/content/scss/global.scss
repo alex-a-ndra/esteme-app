@@ -41,6 +41,10 @@ a:hover {
   color: $dropdown-link-hover-color;
 }
 
+a {
+  color: #9e8148;
+}
+
 /* ==========================================================================
 Browser Upgrade Prompt
 ========================================================================== */
@@ -120,6 +124,14 @@ label {
   font-size: 1.75rem;
   color: #404040;
   font-weight: bolder;
+}
+
+.dropdown-item {
+  &:active,
+  &:hover {
+    background-color: #9e8148;
+    border: none;
+  }
 }
 
 /* ==========================================================================
@@ -305,4 +317,16 @@ Button styles
   &:disabled {
     cursor: not-allowed;
   }
+}
+
+.btn-primary,
+.btn-primary:hover {
+  background-image: linear-gradient(#9e8148, #9e8148 6%, #9e8148);
+  border: 1px solid #9e8148;
+}
+
+.btn-info,
+.btn-info:hover {
+  background-image: linear-gradient(#bbc4c8, #bbc4c8 6%, #bbc4c8);
+  border: 1px solid #bbc4c8;
 }
