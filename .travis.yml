@@ -3,8 +3,9 @@ os:
 services:
   - docker
 language: node_js
+dist: trusty
 node_js:
-  - '8.11.3'
+  - '12.16.1'
 jdk:
   - oraclejdk8
 sudo: false
@@ -15,7 +16,7 @@ cache:
     - $HOME/.m2
 env:
   global:
-    - NODE_VERSION=8.11.3
+    - NODE_VERSION=12.16.1
     - SPRING_OUTPUT_ANSI_ENABLED=ALWAYS
     - SPRING_JPA_SHOW_SQL=false
 before_install:
