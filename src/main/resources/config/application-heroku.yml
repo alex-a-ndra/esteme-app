@@ -27,3 +27,7 @@ spring:
     password: ${JDBC_DATABASE_PASSWORD}
     hikari:
       maximumPoolSize: 8
+
+# CORS is only enabled by default with the "dev" profile, so BrowserSync can access the API
+cors:
+  allowed-origins: 'http://localhost'
