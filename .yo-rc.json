@@ -39,7 +39,7 @@
     "nativeLanguage": "de",
     "languages": ["de"],
     "blueprints": [],
-    "herokuAppName": "esteme-app",
+    "herokuAppName": null,
     "herokuDeployType": "git",
     "herokuJavaVersion": "11"
   }
