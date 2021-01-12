@@ -1,5 +1,7 @@
 # esteme
 
+[![Build Status](https://travis-ci.com/alex-a-ndra/esteme-app.svg?branch=main)](https://travis-ci.com/alex-a-ndra/esteme-app)
+
 This application was generated using JHipster 6.10.5, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.10.5](https://www.jhipster.tech/documentation-archive/v6.10.5).
 
 ## Development
