@@ -60,7 +60,6 @@ export class RegisterComponent implements AfterViewInit {
           lastName,
           langKey: this.languageService.getCurrentLanguage(),
           authorities: [Authority.USER],
-          activated: true,
         })
         .subscribe(
           () => (this.success = true),

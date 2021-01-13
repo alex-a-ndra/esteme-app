@@ -8,6 +8,7 @@ import { EstemeTestModule } from '../../../test.module';
 import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared/constants/error.constants';
 import { RegisterService } from 'app/account/register/register.service';
 import { RegisterComponent } from 'app/account/register/register.component';
+import { Authority } from 'app/shared/constants/authority.constants';
 
 describe('Component Tests', () => {
   describe('RegisterComponent', () => {
@@ -55,8 +56,10 @@ describe('Component Tests', () => {
         expect(service.save).toHaveBeenCalledWith({
           email: '',
           password: 'password',
-          login: '',
           langKey: 'de',
+          firstName: '',
+          lastName: '',
+          authorities: [Authority.USER],
         });
         expect(comp.success).toBe(true);
         expect(mockTranslate.getCurrentLanguageSpy).toHaveBeenCalled();
