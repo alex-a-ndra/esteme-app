@@ -34,7 +34,7 @@ script:
   - chmod +x mvnw
   - ./mvnw clean test
   - npm test
-  - ./mvnw verify -Pprod -DskipTests
+  - ./mvnw verify -Pprod
 notifications:
   webhooks:
     on_success: change # options: [always|never|change] default: always
